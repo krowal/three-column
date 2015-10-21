@@ -1,0 +1,52 @@
+main {
+  margin-top: 50px; }
+  main header {
+    background: #aaa; }
+  main footer {
+    background: #aaa; }
+  main .content {
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap; }
+    main .content .column {
+      float: left; }
+    main .content .left, main .content .right {
+      display: none;
+      width: 100%;
+      background: #bbb; }
+    main .content .right {
+      background: #ddd; }
+    main .content .middle {
+      height: 200px;
+      width: 100%;
+      background: #ccc; }
+    main .content.left-on .left {
+      display: block; }
+    main .content.right-on .right {
+      display: block; }
+
+@media (min-width: 768px) {
+  .content.left-on .left {
+    width: 25%; }
+  .content.left-on .middle {
+    width: 75%; }
+  .content.right-on .right {
+    width: 100%; } }
+@media (min-width: 1200px) {
+  .content.left-on .middle {
+    width: 75%; }
+  .content.left-on.right-on .middle {
+    width: 50%; }
+  .content.right-on .middle {
+    width: 75%; }
+  .content.right-on .right {
+    width: 25%; }
+  .content.right-on.left-on .middle {
+    width: 50%; } }
+.controlls {
+  top: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  position: absolute; }
+
+/*# sourceMappingURL=style.css.map */

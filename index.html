@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="style.css" rel="stylesheet"/>
+    <script>
+        /**
+         * controlls for disable/enable columns
+         * TEST PURPOSES ONLY
+         */
+        var classes = ["left-on", "right-on"];
+
+        function toggleClass(name){
+            var idx = classes.indexOf(name);
+            if(idx >= 0){
+                classes.splice(idx, 1);
+            }else{
+                classes.push(name);
+            }
+            document.getElementsByClassName('content')[0].className = "content "+classes.join(' ');
+        }
+    </script>
+
+</head>
+<body>
+
+<div class="controlls">
+    <button onclick="toggleClass('left-on')">Toggle left</button>
+    <button onclick="toggleClass('right-on')">Toggle right</button>
+</div>
+
+<main>
+    <header>header</header>
+    <div class="content left-on right-on">
+        <section class="column left">left-sidebar</section>
+        <section class="column middle">main</section>
+        <section class="column right">right-sidebar</section>
+    </div>
+    <footer>footer</footer>
+</main>
+</body>
+</html>
